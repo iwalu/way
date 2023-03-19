@@ -48,48 +48,68 @@ function showError(error) {
         console.log("The User have denied the request for Geolocation.");
     }
 }
+// function initMap(lat,lng) {
+//    directionsRenderer = new google.maps.DirectionsRenderer();
+//    directionsService = new google.maps.DirectionsService();
+//   const map = new google.maps.Map(document.getElementById("map"), {
+//     zoom: 25,
+//     center: { lat:  lat, lng:  lng},
+//     disableDefaultUI: false
+//   });
 
-function updateMap() {
-  var end1 = document.getElementById('end1');
-  var end2 = document.getElementById('end2');
-  var selectedEnd = end1.checked ? end1.value : end2.value;
-  calculateAndDisplayRoute(selectedEnd);
-}
+//   var marker = new google.maps.Marker({
+//     position: { lat:  lat, lng:  lng},
+//     map: map,
+//   });
+//   directionsRenderer.setMap(map);
+//   directionsRenderer.setPanel(document.getElementById("sidebar"));
 
+//   //const control = document.getElementById("floating-panel");
 
+//   //map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
-function initMap(lat,lng) {
-   directionsRenderer = new google.maps.DirectionsRenderer();
-   directionsService = new google.maps.DirectionsService();
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 25,
-    center: { lat:  lat, lng:  lng},
-    disableDefaultUI: false
-  });
+//   const onChangeHandler = function () {
+//     calculateAndDisplayRoute(directionsService, directionsRenderer);
+//   };
+//   document.getElementById("end").addEventListener("change", onChangeHandler);
+// }
 
-  var marker = new google.maps.Marker({
-    position: { lat:  lat, lng:  lng},
-    map: map,
-  });
-  directionsRenderer.setMap(map);
-  directionsRenderer.setPanel(document.getElementById("sidebar"));
+function initMap(lat, lng) {
+  directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsService = new google.maps.DirectionsService();
+    
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: { lat: lat, lng: lng },
+      disableDefaultUI: false
+    });
 
-  //const control = document.getElementById("floating-panel");
+    let marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      map: map,
+      title: "Destination",
+    });
 
-  //map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+    directionsRenderer.setMap(map);
+    directionsRenderer.setPanel(document.getElementById("sidebar"));
 
-  const onChangeHandler = function () {
-    calculateAndDisplayRoute(directionsService, directionsRenderer);
-  };
-  document.getElementById("end").addEventListener("change", onChangeHandler);
-}
+    const onChangeHandler = function () {
+      calculateAndDisplayRoute(directionsService, directionsRenderer);
+    };
 
-function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    const inputElements = document.querySelectorAll('input[type="radio"]');
+    inputElements.forEach(input => {
+      input.addEventListener('click', function() {
+        calculateAndDisplayRoute(directionsService, directionsRenderer, input);
+    });
+      
+    });    
+ }
+
+ function calculateAndDisplayRoute(directionsService, directionsRenderer, input) {
   document.getElementById("startWa").style.display = "block";
   const start = document.getElementById("lat").innerHTML+','+document.getElementById("long").innerHTML
-  console.log(start);
-  const end = document.getElementById("end").value;
-
+  const end = input.value;
   directionsService
     .route({
       origin: {
@@ -100,26 +120,12 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
       },
       travelMode: google.maps.TravelMode.WALKING,
     })
-    .then((response) => {
-    	console.log(response);
-    	
+    .then((response) => {    	
       directionsRenderer.setDirections(response);
     })
     .catch((e) => window.alert("Directions request failed due to " + e));
+   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
