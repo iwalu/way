@@ -101,6 +101,7 @@ function initMap(lat, lng) {
     inputElements.forEach(input => {
       input.addEventListener('click', function() {
         console.log(input.value);
+        document.getElementById("destin")= input.value;
         calculateAndDisplayRoute(directionsService, directionsRenderer, input);
     });
       
@@ -134,7 +135,7 @@ function calculateAndDisplayRouteLive(directionsService, directionsRenderer, inp
   getLiveLocation();
   const start = document.getElementById("lat").innerHTML+','+document.getElementById("long").innerHTML
   console.log(start);
-  const end = input.value;
+  const end = input;
 
   directionsService
     .route({
@@ -166,8 +167,8 @@ function startWalkings()
 {
   document.getElementById("startWa").style.display = "none";
   document.getElementById("stopWa").style.display = "block";
-
-  intervalID  = setInterval(function(){calculateAndDisplayRouteLive(directionsService, directionsRenderer, input)}, 1000);
+  var destination = document.getElementById("destin").innerHTML
+  intervalID  = setInterval(function(){calculateAndDisplayRouteLive(directionsService, directionsRenderer, destination)}, 1000);
   console.log("Walkings");
 }
 
