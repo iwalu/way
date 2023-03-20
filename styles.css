@@ -186,10 +186,10 @@ body {
   flex: auto;
 }
 
-#sidebar {
-  /*flex: 0 1 auto;
+/*#sidebar {
+  flex: 0 1 auto;
   padding: 0;
-  top: 0;*/
+  top: 0;
   position: fixed;
   top: 0;
   width: 40px;
@@ -197,7 +197,7 @@ body {
   background-color: #f2f2F5;
   right: 0px;
   padding: 2px;
-}
+}*/
 #sidebar > div {
   padding: 0.5rem;
 }
@@ -222,8 +222,6 @@ body {
   width: 208px;
   height: 100%;
   background-color: #f2f2F5;
- 
-  transition: all .5s ease;
 }
 
 /* #check{
