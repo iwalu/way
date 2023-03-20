@@ -101,7 +101,7 @@ function initMap(lat, lng) {
     inputElements.forEach(input => {
       input.addEventListener('click', function() {
         console.log(input.value);
-        document.getElementById("destin")= input.value;
+        document.getElementById("destin").innerHTML= input.value;
         calculateAndDisplayRoute(directionsService, directionsRenderer, input);
     });
       
