@@ -100,7 +100,7 @@ function initMap(lat, lng) {
     const inputElements = document.querySelectorAll('input[type="radio"]');
     inputElements.forEach(input => {
       input.addEventListener('click', function() {
-        console.log(input);
+        console.log(input.value);
         calculateAndDisplayRoute(directionsService, directionsRenderer, input);
     });
       
