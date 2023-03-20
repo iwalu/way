@@ -129,11 +129,11 @@ function initMap(lat, lng) {
 
 
 
-function calculateAndDisplayRouteLive(directionsService, directionsRenderer) {
+function calculateAndDisplayRouteLive(directionsService, directionsRenderer, input) {
   getLiveLocation();
   const start = document.getElementById("lat").innerHTML+','+document.getElementById("long").innerHTML
   console.log(start);
-  const end = document.getElementById("end").value;
+  const end = input.value;
 
   directionsService
     .route({
@@ -166,7 +166,7 @@ function startWalkings()
   document.getElementById("startWa").style.display = "none";
   document.getElementById("stopWa").style.display = "block";
 
-  intervalID  = setInterval(function(){calculateAndDisplayRouteLive(directionsService, directionsRenderer)}, 1000);
+  intervalID  = setInterval(function(){calculateAndDisplayRouteLive(directionsService, directionsRenderer, input)}, 1000);
   console.log("Walkings");
 }
 

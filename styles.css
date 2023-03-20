@@ -127,7 +127,7 @@ body {
   height: 100%;
   box-sizing: border-box;
   overflow: auto;
-  display: none;
+   /*display: none;*/
 }
 
 .warnbox-content {
@@ -187,10 +187,91 @@ body {
 }
 
 #sidebar {
-  flex: 0 1 auto;
+  /*flex: 0 1 auto;
   padding: 0;
+  top: 0;*/
+  position: fixed;
+  top: 0;
+  width: 188px;
+  height: 100%;
+  background-color: #f2f2F5;
+  right: 0px;
+  padding: 8px;
 }
 #sidebar > div {
   padding: 0.5rem;
 }
 
+/*#sidebar {
+  position: fixed;
+  right: 0;
+  width: 255px;
+  height: 100%;
+  background-color: #f2f2F5;
+ 
+  transition: all .5s ease;
+}
+*/
+
+
+@media screen and (max-width: 992px){
+
+#sidebar {
+  position: fixed;
+  right: 0;
+  width: 255px;
+  height: 100%;
+  background-color: #f2f2F5;
+ 
+  transition: all .5s ease;
+}
+
+/* #check{
+  display: none;
+}
+
+label #nb,label #annuler{
+  position: absolute;
+  cursor:pointer;
+  background-color: #F9F9F9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+label #nb{
+  left: 312px;
+  top: 260px;
+  font-size: 35px;
+  color: #30BDF4;
+  padding: 6px 12px ;
+  transition: all .5s;
+}
+
+label #annuler{
+  z-index: 1111;
+  left: -595px;
+  top:17px ;
+  font-size: 30px;
+  color: #30BDF4;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar{
+
+  right: 0;
+
+}
+
+#check:checked ~ label #nb{
+  right: 250px; 
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+#check:checked ~ label #annuler{
+  left: 595px;
+}*/
+ 
+}

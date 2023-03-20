@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying Text Directions With setPanel()</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="index.js"></script>
+    <!-- jsFiddle will insert css and js -->
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <!--<strong id="destText">Destination:</strong>
+      <select id="end">
+        <option value="">Selectionner une destination</option>
+        <option value="Festival des Glaces, CotonouD">Festival des Glaces, Cotonou</option>
+        <option value="L'Africaine Vie Bénin, Cotonou">AAVIE</option>
+        <option value="Dreamxr, Cotonou">Dreamxr, Cotonou</option>
+        <option value="Pharmacie Segbeya, Rue 1254, Cotonou">Pharmacie Segbeya, Cotonou</option>
+        <option value="Centre de Santé de Zogbo, 99HQ+8HX, Rue 2723, Cotonou">Centre de Santé de Zogbo</option>
+        <option value="Hotel De La Cite Houeyiho, Cotonou">Hotel De La Cite Houeyiho</option>
+        <option value="Kaftia Co Sarl, Cotonou">Kaftia Co Sarl</option>
+        <option value="Bon Voyage Hôtel, Cotonou">Bon Voyage Hôtel</option>
+        <option value="Etoile Rouge, Cotonou">Etoile Rouge</option>
+      </select>-->
+      <button id="startWa" style="display: none;" onclick="startWalkings()">Demarrer la navigation</button>
+      <button id="stopWa" style="display: none;" onclick="stopWalkings()">Arreter la navigation</button>
+      <button id="seeAR" style="display: none;" onclick="openAR()">Voir en AR</button>
+    </div>
+    
+    <div hidden><p id="lat"></p><p id="long"></p></div>
+    <div id="container">
+      
+      <div id="map">
+        
+      </div>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="nb"></i>
+        <i class="fas fa-times" id="annuler"></i>
+      </label>
+      <div id="sidebar" >
+      </div>
+
+      <div class="cards-container">
+        <div class="cards-title">
+          <h1>Populaire</h1>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="./img/34g.jpg" alt="An image">
+            <div class="card-content">
+              <h2>pharmacie sebeya</h2>
+              <p>Rectorat, Calavi</p>
+              <input type="radio" name="destination" class="destination-btn" id="input1" value="Pharmacie Segbeya, Rue 1254, Cotonou">
+              <label for="input1">
+                <span class="btn btn--blue">Itinéraire</span>
+              </label>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/34g.jpg" alt="An image">
+            <div class="card-content">
+              <h2>les fauvettes</h2>
+              <p>Rectorat, Calavi</p>
+              <input type="radio" name="destination" class="destination-btn" id="input2" value="9FP2+GCF, Rue 1455, Cotonou">
+              <label for="input2">
+                <span class="btn btn--blue">Itinéraire</span>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <img src="./img/34g.jpg" alt="An image">
+            <div class="card-content">
+              <h2>l'ecole kpondehou</h2>
+              <p>Rectorat, Calavi</p>
+              <input type="radio" name="destination" class="destination-btn" id="input3" value="Ayelawadje 2, Cotonou">
+              <label for="input3">
+                <span class="btn btn--blue">Itinéraire</span>
+              </label>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div hidden><p id="lat"></p><p id="long"></p></div>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Xs9VPCcxeUWRqoH8scsdzRSto4actzc&region=FR&language=fr&callback=initMap"
+    ></script>
+ 
+        
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+Ayelawadje 2, Cotonou
