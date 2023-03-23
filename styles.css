@@ -524,6 +524,7 @@ body {
   border-radius:8px;
   box-shadow: 0 9px #26282835;
   display: inline-block;
+  z-index:999px;
   
 }
 
