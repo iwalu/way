@@ -18,17 +18,13 @@ body {
 
 
 #startWa {
-  text-align: center;
-  cursor: pointer;
+
+  
   font-size:16px;
   
-  color: #fff;
   padding:20px 20px;
-  outline: none;
-  background-color: #30BDF4;
-  border: none;
-  border-radius:8px;
-  box-shadow: 0 9px #26282835;
+ 
+
   
 }
 
@@ -545,31 +541,25 @@ body {
 
 #stopWa{
   
-  cursor: pointer;
+  
   font-size:16px;
 
   
   padding:20px 20px;
-  outline: none;
- 
-  border: none;
+
   border-radius:8px;
  
   
 }
 
 #seeAR {
-  text-align: center;
-  cursor: pointer;
+ 
   font-size:16px;
-  color: #fff;
+  
   padding:20px 20px;
-  outline: none;
-  background-color: #30BDF4;
-  border: none;
+
   border-radius:8px;
-  box-shadow: 0 9px #26282835;
-  display: inline-block;
+ 
   
 }
 
