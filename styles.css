@@ -24,7 +24,8 @@ body {
   
   padding:20px 20px;
  
-
+  position: relative;
+  z-index: 9999;
   
 }
 
@@ -539,29 +540,7 @@ body {
 }*/
 
 
-#stopWa{
-  
-  
-  font-size:16px;
 
-  
-  padding:20px 20px;
-
-  border-radius:8px;
- 
-  
-}
-
-#seeAR {
- 
-  font-size:16px;
-  
-  padding:20px 20px;
-
-  border-radius:8px;
- 
-  
-}
 
 /*
 #startWa, #stopWa, #seeAR:hover{
