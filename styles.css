@@ -21,9 +21,9 @@ body {
   text-align: center;
   cursor: pointer;
   font-size:16px;
-  margin: 0 0 0 10px;
+  
   color: #fff;
-  padding:20px 30px;
+  padding:20px 20px;
   outline: none;
   background-color: #30BDF4;
   border: none;
@@ -32,7 +32,7 @@ body {
   
 }
 
-#startWa, #stopWa, #seeAR:hover{
+/*#startWa, #stopWa, #seeAR:hover{
   background-color: #30BDF4;
 }
 
@@ -40,7 +40,7 @@ body {
   background-color: #30BDF4;
   box-shadow: 0 5px #27272752;
   transform: translateY(4px);
-}
+}*/
 
 
 .cards-container {
@@ -498,15 +498,11 @@ color : #30BDF4;
 
 
 @media screen and (max-width: 992px){
-
-#sidebar {
- 
-  background-color: #f2f2F5;
-  padding: 10px;
- 
- 
-}
-
+  
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
 html,
 body {
   height: 100%;
@@ -515,13 +511,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#startWa, #stopWa, #seeAR {
+#startWa{
   text-align: center;
   cursor: pointer;
   font-size:16px;
 
   color: #fff;
-  padding:20px 30px;
+  padding:20px 20px;
   outline: none;
   background-color: #30BDF4;
   border: none;
@@ -531,6 +527,37 @@ body {
   
 }
 
+#stopWa{
+  text-align: center;
+  cursor: pointer;
+  font-size:16px;
+
+  color: #fff;
+  padding:20px 20px;
+  outline: none;
+  background-color: #30BDF4;
+  border: none;
+  border-radius:8px;
+  box-shadow: 0 9px #26282835;
+  display: inline-block;
+}
+
+#seeAR {
+  text-align: center;
+  cursor: pointer;
+  font-size:16px;
+  color: #fff;
+  padding:20px 20px;
+  outline: none;
+  background-color: #30BDF4;
+  border: none;
+  border-radius:8px;
+  box-shadow: 0 9px #26282835;
+  display: inline-block;
+  
+}
+
+/*
 #startWa, #stopWa, #seeAR:hover{
   background-color: #30BDF4;
 }
@@ -540,7 +567,7 @@ body {
   box-shadow: 0 5px #27272752;
   transform: translateY(4px);
 }
-
+*/
 
 
 
@@ -657,6 +684,14 @@ body {
   box-sizing: border-box;
   overflow: auto;
    /*display: none;*/
+}
+
+#sidebar {
+ 
+  background-color: #f2f2F5;
+  padding: 10px;
+ 
+ 
 }
 
 .warnbox-content {
