@@ -497,7 +497,7 @@ color : #30BDF4;
 
 
 
-@media screen and (max-width: 992px){
+@media screen and (min-width: 768px){
   
   *, *::after, *::before {
     box-sizing: border-box;
