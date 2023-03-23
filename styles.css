@@ -511,7 +511,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#startWa{
+/*#startWa{
   text-align: center;
   cursor: pointer;
   font-size:16px;
@@ -526,21 +526,36 @@ body {
   display: inline-block;
   z-index:999px;
   
+}*/
+
+
+#startWa{
+  
+  cursor: pointer;
+  font-size:16px;
+  padding:20px 20px;
+  outline: none;
+  border: none;
+  border-radius:8px;
+ 
+  z-index:999px;
+  
 }
 
+
 #stopWa{
-  text-align: center;
+  
   cursor: pointer;
   font-size:16px;
 
-  color: #fff;
+  
   padding:20px 20px;
   outline: none;
-  background-color: #30BDF4;
+ 
   border: none;
   border-radius:8px;
-  box-shadow: 0 9px #26282835;
-  display: inline-block;
+ 
+  
 }
 
 #seeAR {
