@@ -16,6 +16,33 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
+#startWa, #stopWa, #seeAR {
+  text-align: center;
+  cursor: pointer;
+  font-size:16px;
+  margin: 0 0 0 10px;
+  color: #fff;
+  padding:20px 30px;
+  outline: none;
+  background-color: #30BDF4;
+  border: none;
+  border-radius:8px;
+  box-shadow: 0 9px #26282835;
+  
+}
+
+#startWa, #stopWa, #seeAR:hover{
+  background-color: #30BDF4;
+}
+
+#startWa, #stopWa, #seeAR:active {
+  background-color: #30BDF4;
+  box-shadow: 0 5px #27272752;
+  transform: translateY(4px);
+}
+
+
 .cards-container {
   background-color: #f2f2F5;
   border-radius: 28px;
