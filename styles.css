@@ -711,6 +711,9 @@ body {
   flex-basis: 0;
   flex-grow: 4;
   height: 100%;
+  position: absolute;
+  z-index: 2200;
+
 }
 
 #floating-panel {
