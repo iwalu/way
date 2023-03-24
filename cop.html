@@ -34,38 +34,45 @@
         <option value="Bon Voyage Hôtel, Cotonou">Bon Voyage Hôtel</option>
         <option value="Etoile Rouge, Cotonou">Etoile Rouge</option>
       </select>-->
+     
       <button id="startWa" style="display: none;" onclick="startWalkings()">Demarrer la navigation</button>
       <button id="stopWa" style="display: none;" onclick="stopWalkings()">Arreter la navigation</button>
       <button id="seeAR" style="display: none;" onclick="openAR()">Voir en AR</button>
+    
     </div>
     
     <div hidden><p id="lat"></p><p id="long"></p><p id="destin"></p></div>
     <div id="container">
       
+      
+    
+
       <div id="map">
         
       </div>
-      <input type="checkbox" id="check">
-      <label for="check">
-        <i class="fas fa-bars" id="nb"></i>
-        <i class="fas fa-times" id="annuler"></i>
-      </label>
-      <div id="sidebar" >
-      </div>
+      
+      
+
+      <div class="searchBox">
+
+        <input class="searchInput"type="text" name="" placeholder="Recherche">
+        <button class="searchButton" href="#">
+            <i class="fa fa-search">
+              
+            </i>
+        </button>
+    </div>
 
       <div class="cards-container">
+        <!--<div class="search-container">
+          <input type="text" id="search-input" placeholder="Recherche ...">
+          <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+        </div>-->
 
-        <form>
-          <input type="text" id="search" placeholder="Rechercher...">
-          <button type="submit" class="fas fa-search"></button>
-        </form>
-
+       
+        
         <div class="cards-title">
-
-
           <h1>Populaire</h1>
-
-
         </div>
         <div class="cards">
           <div class="card">
@@ -107,11 +114,11 @@
 
 
           <div class="card">
-            <img src="./img/34g.jpg" alt="An image">
+            <img src="./img/35g.png" alt="An image">
             <div class="card-content">
-              <h2>pharmacie sebeya</h2>
-              <p>pharmacie sebeya</p>
-              <input type="radio" name="destination" class="destination-btn" id="input4" value="Pharmacie Segbeya, Rue 1254, Cotonou">
+              <h2>CEG</h2>
+              <p>ablangandan</p>
+              <input type="radio" name="destination" class="destination-btn" id="input4" value="06 BP 2545 AGBLANGANDAN, Porto-Novo">
               <label for="input4">
                 <span class="btn btn--blue">Itinéraire</span>
               </label>
@@ -119,13 +126,66 @@
           </div>
 
 
-          
+          <div class="card">
+            <img src="./img/34g.jpg" alt="An image">
+            <div class="card-content">
+              <h2>IFRI</h2>
+              <p>ifri</p>
+              <input type="radio" name="destination" class="destination-btn" id="input5" value="9FP2+GCF, Rue 1455, Cotonou">
+              <label for="input5">
+                <span class="btn btn--blue">Itinéraire</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./img/34g.jpg" alt="An image">
+            <div class="card-content">
+              <h2>Fauvettes</h2>
+              <p>ecole</p>
+              <input type="radio" name="destination" class="destination-btn" id="input6" value="9FP2+GCF, Rue 1455, Cotonou">
+              <label for="input6">
+                <span class="btn btn--blue">Itinéraire</span>
+              </label>
+            </div>
+          </div>
 
 
-          
+          <div class="card">
+            <img src="./img/34g.jpg" alt="An image">
+            <div class="card-content">
+              <h2>pharmacie sebebya</h2>
+              <p>pharmacie</p>
+              <input type="radio" name="destination" class="destination-btn" id="input7" value="Rue 1254, Cotonou">
+              <label for="input7">
+                <span class="btn btn--blue">Itinéraire</span>
+              </label>
+            </div>
+          </div>
           
         </div>
       </div>
+      <div class="mnba">
+         <input type="checkbox"  class="tyne" id="check">
+         <label for="check" class="retout">
+          <span class="navigationIcon">&nbsp;</span>
+        </label>
+
+        <div class="navigationBg">&nbsp;</div>
+
+         </label>
+         <div id="sidebar">
+  
+         </div>
+      </div>
+
+
+
+
+
+
+
+      
     </div>
 
     <div hidden><p id="lat"></p><p id="long"></p></div>
@@ -145,6 +205,7 @@
     
   </body>
 </html>
+
 
 
 
