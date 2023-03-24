@@ -435,7 +435,7 @@ bottom: 8.33%;*/
   height: 36px;
   border-radius: 8px;
   padding: 2px;
-  z-index: 2000;
+  z-index: 1400;
 
 }
 
@@ -717,7 +717,7 @@ body {
   position: absolute;
   top: 10px;
   left: 25%;
-  z-index: 2200;
+  z-index: 2000;
   background-color: #fff;
   padding: 5px;
   border: 1px solid #999;
@@ -946,13 +946,13 @@ bottom: 8.33%;*/
 .searchBox {
   position: absolute;
   top: 55%;
-  left: 86%;
+  left: 60%;
   transform:  translate(-50%,50%);
   background-color: #f2f2F5;
   height: 36px;
   border-radius: 8px;
   padding: 2px;
-  z-index: 2000;
+  z-index: 1400;
 
 }
 
