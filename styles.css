@@ -741,7 +741,7 @@ body {
  
   background-color: #F9F9F9;
   padding: 20px;
-  position: absolute;
+  position: relative;
   top: 12px;
   bottom: 0;
   height: 80%;
@@ -981,6 +981,10 @@ color : #30BDF4;
 
 /*Terminer Second bouton de recherche */
 
+
+#startWa {
+  display: block;
+}
    
 /*.search-container {
   display: flex;
