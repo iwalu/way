@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="index.js"></script>
-    <script src="donnees.js"></script>
     <!-- jsFiddle will insert css and js -->
     <style>
       
@@ -52,7 +51,7 @@
         <i class="fas fa-bars" id="nb"></i>
         <i class="fas fa-times" id="annuler"></i>
       </label>
-      <button class="opensidebar" href="#sidebar"> <i class="fa fa-map-o" style="color: rgb(255, 255, 255);"></i> </button>
+      <button class="opensidebar" href="#sidebar"> <i class="fas fa-map" style="color: rgb(255, 255, 255);"></i> </button>
       <div id="sidebar" >
       </div>
       <!-- <button id="close">&#x2715;</button> -->
@@ -62,7 +61,7 @@
       <div class="cards-container">
 
         <form>
-          <input type="text" id="search" placeholder="Rechercher...">
+          <input type="text" id="search" placeholder="Rechercher..." onkeyup="research(this)">
           <button type="submit" class="fas fa-search"></button>
         </form>
 
@@ -80,10 +79,10 @@
               <img src="./img/34g.jpg" alt="An image">
               <div class="card-content">
                 <h2>Rectorat UAC</h2>
-                <p>Rectorat, Calavi</p>
+                <p><i class="fas fa-map-marker-alt"></i>  Rectorat, Calavi</p>
                 <input type="radio" name="destination" class="destination-btn" id="input1" value="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">
                 <label for="input1">
-                  <span class="btn btn--blue">Itinéraire</span>
+                  <span class="btn btn--blue flex"><i class="fas fa-arrows-alt"  style="color: #fff; " ></i> Itinéraire</span>
                 </label>
               </div>
             </div>
@@ -91,21 +90,21 @@
             <img src="./img/35g.png" alt="An image">
             <div class="card-content">
               <h2>EPAC</h2>
-              <p>epac</p>
+              <p><i class="fas fa-map-marker-alt" style="color: #6B7E86; "></i> epac</p>
               <input type="radio" name="destination" class="destination-btn" id="input2" value="C87R+RV3, Godomey">
               <label for="input2">
-                <span class="btn btn--blue">Itinéraire</span>
+                <span class="btn btn--blue flex "><i class="fas fa-arrows-alt"  style="color: #fff; " ></i> Itinéraire</span>
               </label>
             </div>
             </div>
             <div class="card"> 
-            <img src="./img/38.JPG" alt="An image">
-            <div class="card-content">
+              <img src="./img/38.JPG" alt="An image">
+              <div class="card-content">
               <h2>IFRI</h2>
-              <p>ifri</p>
+              <p><i class="fas fa-map-marker-alt" style="color: #6B7E86; "></i> ifri</p>
               <input type="radio" name="destination" class="destination-btn" id="input3" value="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">
               <label for="input3">
-                <span class="btn btn--blue">Itinéraire</span>
+                <span class="btn btn--blue flex"><i class="fas fa-arrows-alt"  style="color: #fff; " ></i> Itinéraire</span>
               </label>
             </div>
             </div>
@@ -113,10 +112,10 @@
               <img src="./img/34g.jpg" alt="An image">
               <div class="card-content">
                 <h2>pharmacie sebeya</h2>
-                <p>pharmacie sebeya</p>
+                <p><i class="fas fa-map-marker-alt"  style="color: #6B7E86; " ></i> pharmacie sebeya</p>
                 <input type="radio" name="destination" class="destination-btn" id="input4" value="Pharmacie Segbeya, Rue 1254, Cotonou">
                 <label for="input4">
-                  <span class="btn btn--blue">Itinéraire</span>
+                  <span class="btn btn--blue flex"><i class="fas fa-arrows-alt"  style="color: #fff; " ></i> Itinéraire</span>
                 </label>
               </div>
             </div>
@@ -135,6 +134,39 @@
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Xs9VPCcxeUWRqoH8scsdzRSto4actzc&region=FR&language=fr&callback=initMap"
     ></script>
+
+    <script type="text/javascript">
+      function research(el){
+        const card_content = document.querySelectorAll('.card-content')
+        const search_keyword = el.value.toUpperCase()
+        const card_container = document.querySelector('.cds')
+
+        if(search_keyword){
+          card_content.forEach((el,i)=>{
+            const h2 = el.children[0]
+            if(h2.innerText.includes(search_keyword)){
+              
+            }else{
+              el.parentNode.style.display = 'none';
+            }
+          })
+        }else{
+          console.log('iterate')
+          card_content.forEach((el,i)=>{
+              el.parentNode.style.display = 'flex';
+            
+          })
+        }
+
+
+        // console.log({search_keyword})
+
+        // console.dir({card_content})4
+        // card_content.forEach((el,i)=>{
+
+        // })
+      }
+    </script>
  
         
 
