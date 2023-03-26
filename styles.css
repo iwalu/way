@@ -47,12 +47,18 @@ body {
 .card:not(:last-child) {
   margin-bottom: 16px;
 }
-
+.cds{
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.cards {
+  display: flex;
+  width: 95%;
+  overflow-x: hidden;
+  gap: 1rem;
+}
 @media screen and (min-width: 768px) {
-  .cards {
-    display: flex;
-    gap: 1rem;
-  }
 
   .card:not(:last-child) {
     margin-bottom: 0;
@@ -254,9 +260,19 @@ button {
   width: 250px;
   height: 30%;
   background-color: #f2f2F5;
- 
+  display:none;
   transition: all .5s ease;
 }
+.opensidebar{
+  position: fixed;
+  top: 50%;
+  border-radius: 8px;
+}
+.opensidebar:focus +  #sidebar{
+  display:block;
+}
+
+
 
 /* #check{
   display: none;

@@ -11,9 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Displaying Text Directions With setPanel()</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./fonts/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="index.js"></script>
+    <script src="donnees.js"></script>
     <!-- jsFiddle will insert css and js -->
     <style>
       
@@ -50,8 +52,12 @@
         <i class="fas fa-bars" id="nb"></i>
         <i class="fas fa-times" id="annuler"></i>
       </label>
+      <button class="opensidebar" href="#sidebar"> <i class="fa fa-map-o" style="color: rgb(255, 255, 255);"></i> </button>
       <div id="sidebar" >
       </div>
+      <!-- <button id="close">&#x2715;</button> -->
+      
+      
 
       <div class="cards-container">
 
@@ -67,19 +73,21 @@
 
 
         </div>
+       
         <div class="cards">
-          <div class="card">
-            <img src="./img/34g.jpg" alt="An image">
-            <div class="card-content">
-              <h2>Rectorat UAC</h2>
-              <p>Rectorat, Calavi</p>
-              <input type="radio" name="destination" class="destination-btn" id="input1" value="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">
-              <label for="input1">
-                <span class="btn btn--blue">Itinéraire</span>
-              </label>
+          <div class="cds">
+            <div class="card">
+              <img src="./img/34g.jpg" alt="An image">
+              <div class="card-content">
+                <h2>Rectorat UAC</h2>
+                <p>Rectorat, Calavi</p>
+                <input type="radio" name="destination" class="destination-btn" id="input1" value="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">
+                <label for="input1">
+                  <span class="btn btn--blue">Itinéraire</span>
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="card">
+            <div class="card">
             <img src="./img/35g.png" alt="An image">
             <div class="card-content">
               <h2>EPAC</h2>
@@ -89,10 +97,8 @@
                 <span class="btn btn--blue">Itinéraire</span>
               </label>
             </div>
-          </div>
-
-
-          <div class="card">
+            </div>
+            <div class="card"> 
             <img src="./img/38.JPG" alt="An image">
             <div class="card-content">
               <h2>IFRI</h2>
@@ -102,23 +108,19 @@
                 <span class="btn btn--blue">Itinéraire</span>
               </label>
             </div>
-          </div>
-
-
-
-          <div class="card">
-            <img src="./img/34g.jpg" alt="An image">
-            <div class="card-content">
-              <h2>pharmacie sebeya</h2>
-              <p>pharmacie sebeya</p>
-              <input type="radio" name="destination" class="destination-btn" id="input4" value="Pharmacie Segbeya, Rue 1254, Cotonou">
-              <label for="input4">
-                <span class="btn btn--blue">Itinéraire</span>
-              </label>
+            </div>
+            <div class="card">
+              <img src="./img/34g.jpg" alt="An image">
+              <div class="card-content">
+                <h2>pharmacie sebeya</h2>
+                <p>pharmacie sebeya</p>
+                <input type="radio" name="destination" class="destination-btn" id="input4" value="Pharmacie Segbeya, Rue 1254, Cotonou">
+                <label for="input4">
+                  <span class="btn btn--blue">Itinéraire</span>
+                </label>
+              </div>
             </div>
           </div>
-
-
           
 
 
